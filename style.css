@@ -9,6 +9,8 @@
 /* There is always a default margin to the body tag. So we set it to zero */
 /* The * will select every tag */
 
+/* Header Styles Start */
+
 .header_left img {
   height: 40px;
 }
@@ -33,3 +35,388 @@
 
 /* Position sticky: */
 /* Whenever you use the position property (with any of its values), you can always use any of the top, bottom, left, or right values  */
+
+.header_left {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* border: 3px solid red; */
+}
+
+/* Difference between space-evenly and space-between */
+
+.header_input {
+  display: flex;
+  align-items: center;
+  background-color: #eff2f5;
+  /* border: 3px solid red; */
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 999px;
+}
+
+.header_input input {
+  border: none;
+  background-color: transparent;
+  outline-width: 0;
+}
+
+/* Outline width = 0 : allows the input field to not have an outline when clicked, even if the border is set to none */
+
+/* If an element has a background color, and you want to make the background color be visible in front, set the element's background color to transparent */
+
+.header_middle {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  /* border: 3px solid red; */
+}
+
+/* What does the flex property do? Like the flex: 1? The header_middle box takes as much space as possible, even in a justify-content: space between*/
+
+.header_option .material-icons {
+  font-size: xx-large;
+  color: gray;
+}
+
+.header_option:hover .material-icons {
+  color: #2e81f4;
+}
+
+.header_option {
+  /* border: 3px solid red; */
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  cursor: pointer;
+}
+
+.header_option.active .material-icons {
+  color: #2e81f4;
+}
+
+/* Note: There is no space between .header_option.active because we are chaining two classes. If there was a space, it would be a parent and descendant  */
+
+.header_option.active {
+  border-bottom: solid 4px #2e81f4;
+}
+
+.header_option:hover {
+  background-color: #eff2f5;
+  align-items: center;
+  padding: 0 30px;
+  border-radius: 10px;
+  border-bottom: none;
+}
+
+.header_info {
+  display: flex;
+  /* border: 3px solid red; */
+  align-items: center;
+}
+
+.header_info h4 {
+  margin-left: 10px;
+}
+
+.header_right {
+  display: flex;
+  align-items: center;
+}
+
+.header_right .material-icons {
+  /* font-size: xx-large; */
+  color: gray;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* Header Styles End */
+
+/* Main body style starts */
+
+.main_body {
+  /* border: 3px solid orange; */
+  display: flex;
+  /* background-color: blue; */
+}
+
+/* Sidebar styles Start */
+
+.sidebar {
+  /* border: 3px solid red; */
+  padding: 25px 10px;
+  flex: 0.33;
+}
+
+.sidebar_rows {
+  display: flex;
+  /* border: 3px solid green; */
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.sidebar_rows:hover {
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+.sidebar_rows h4 {
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.sidebar_rows .material-icons {
+  color: #2e81f4;
+  font-size: xx-large;
+}
+/* Sidebar Styles End */
+
+/* Feed Styles Start */
+
+.feed {
+  /* border: 3px solid blue; */
+  flex: 1;
+  padding: 30px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.story {
+  /* border: 3px solid red; */
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+  width: 120px;
+  height: 200px;
+  box-shadow: 0 5px 17px -7px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform 100ms ease-in;
+}
+
+.story:hover {
+  transform: scale(1.07);
+}
+
+.story_avatar {
+  margin: 10px;
+}
+
+.story h4 {
+  position: absolute;
+  color: white;
+  bottom: 20px;
+  left: 20px;
+}
+
+.story_reel {
+  /* border: 3px solid red; */
+  padding: 10px 0px;
+  display: flex;
+  /* width: 100%; */
+}
+
+/* Trick: Width of 100% of a flex item inside its flex container. The flex container has justify and align of center. */
+/* Trick: If a flex item is made width 100% of its container, its width will not be determined by the width of its elements as usual */
+
+body {
+  background-color: #f1f2f5;
+}
+
+/* MessageSender styles start */
+
+.messageSender {
+  /* border: 3px solid red; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 7px -7px rgba(0, 0, 0, 0.75);
+  width: 100%;
+}
+
+.messageSender_top {
+  /* border: 3px solid red; */
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eff2f5;
+  padding: 15px;
+}
+
+.messageSender_top form {
+  flex: 1;
+  display: flex;
+  /* border: 3px solid blue; */
+}
+
+.messageSender_top form input {
+  flex: 1;
+  outline-width: 0;
+  border: none;
+  padding: 15px 20px;
+  /* border: 3px solid red; */
+  margin: 0 10px;
+  border-radius: 999px;
+  background-color: #eff2f5;
+}
+
+.messageSender_buttom {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.messageSender_option {
+  margin: 5px;
+  /* border: 3px solid red; */
+  padding: 8px;
+  color: gray;
+  display: flex;
+  align-items: center;
+}
+
+.messageSender_option h3 {
+  margin-left: 10px;
+  font-size: medium;
+}
+
+.messageSender_option:hover {
+  border-radius: 10px;
+  background-color: #eff2f5;
+  cursor: pointer;
+}
+
+/* PLEASE NOTE: justify-contenet: space evenly will leave a space at the beinning, while space between will not */
+
+/* To add a thin line, like one demacating two containers, use: border-bottom: 1px solid color */
+
+/* Putting a single input field inside a form tag will prevent it from taking all the length of the flex container */
+/* To prevent an image (that is a flex item) from growing with its flex container, due to other adjacent flex items, align it to any position(align-items: flex-start, flex-end, center). If you use justify content anything, it will not work*/
+
+/* MessageSender styles ends */
+
+/* flex is different from display flex, and not even dependent on the display flex. Remember a flex items have width as much as the containing elements. To allow the flex item take as much space within a flex container, set flex to 1 */
+/* PLEASE NOTE: background-color on body tag DOES NOT cascade. That is, it will not affect the background color of all other block elements placed above it */
+/* Notice the trick is to use an inline style in the .story div*/
+/* Difference between object-fit: cover and background-size: cover????? */
+/* Position relative will make the element have a higher z index */
+/* Note how the div with the class .story has a higher index than any element in another div with class .story. But within the div with class story, the img (avatar) element has highest z-index */
+
+/* CSS Transform property:
+
+// 2D transforms:
+// Think of your palm.....yes the face of your hand
+// Z-axis = When your left palm is facing your face.....move it front and back
+// Y-axis = When your left  palm is facing the ceiling.....move it up and down
+// X-axis = When your left palm is facing the right....move it front and back
+
+// *Transform Functions*
+
+// rotate(x) = Defines a transformation that MOVES the element AROUND a FIXED POINT on the Z axis......note: Z-axis, not X-axis. The x in the function does not refer to x-axis. There is rotateX(), rotateY(), and rotateZ(), which is same as just rotate()
+// translate(x,y) = MOVES the position of the element on the X and Y axis. Recall translational motion in physics is in only one direction
+// translateX(x) = MOVES the position of the element on the X-axis
+// translateY(y) = MOVES the position of the element on the Y-axis
+// scale(x,y) = MODIFIES the SIZE of the element on the X and Y axis
+// scaleX(x) = MODIFIES the SIZE of the element on the X axis
+// scaleY(y) = MODIFIES the SIZE of the element on the Y axis
+// skew(x,y) = SHEAR mapping, or transvection, distorting each point of an element by a certain angle in each direction.
+// skewX(x) = Horizontal shear mapping distorting each point of an element by a certain angle in the horizontal direction
+// skewY(y) = Vertical shear mapping distorting each point of an element by a certain angle in the vertical direction
+// matrix() = Defines a 2D transformation in the form of transformational matrix
+
+
+// *Very Important*
+
+// ANGLE = The angle by which the element should be ROTATED or SKEWED (depending on the function with which it is used).
+// angle can be provided in degrees (deg), gradians (grad), radians (rad) or turns (turn).
+// NOTE: In skew() function, the second angle is optional. If not provided, there will be no (0) skew in Y-axis.
+
+// LENGTH-OR-PERCENTAGE = The distance expressed as a length or a percentage by which the element should be TRANSLATED.
+// In translate() function, the second length-or-percentage is optional. If not provided,
+// then there would be no (0) translation in the Y-axis.
+
+// SCALE-FACTOR = A number which defines how many times the element should be SCALED in the specific axis.
+// PLEASE NOTE: In scale() function, the second scale-factor is optional. If not provided, the scale-factor will be applied for the Y-axis also.
+
+// *Example*
+
+// ROTATE
+
+// .rotate {
+  height: 100px
+  transform: rotate(45deg)
+}
+
+// This example will rotate the div by 45 degrees clockwise. THe center of rotation is in the center of the div, 50% from the left
+// and 50% from the top. You can change the center of rotation by setting the transform-origin property.
+
+// transform-origin: 100%(from left) 50% (from top)
+
+// The above example will set the center of rotation to the middle of the right side end.
+
+// NOTE: There is also rotate()
+
+// SCALE
+
+// .scale {
+  height: 100px (Y-axis)
+  width: 100px (X-axis)
+  transform: scale(0.5, 1.3)
+}
+
+// This example will scale the div to 100px * 0.5 = 50px on the X axis and to 100px * 1.3 = 130px on the Y axis.
+
+// The center of this transform is in the center of the div, 50% from the left and 50% from the top.
+
+// SKEW
+
+// .skew{
+  width: 100px
+  height: 100px
+  transform: skew(20deg, -30deg)
+}
+
+// This example will skew the div by 20 degree on the X axis and by -30 degrees on the Y axis.
+// The center of this transform is in the center of the div, 50% from the left and 50% from the top.
+
+// MULTIPLE TRANSFORMS
+
+// Multiple transforms can be applied to an element in one property like this::after
+
+// transform: rotate(15deg) translateX(200px)
+
+// This will rotate the element 15 degrees clockwise and then translate it 200px to the right.
+
+// NOTE: In chained transforms, the coordinate system moves with the element. This means that the translation will not be horizontal but on
+// an axis rotate of 15 degree clockwise as shown
+
+// Changing the order of transforms will change the output
+
+// transform: translateX(200px) rotate(15deg)
+
+// TRANSLATE
+
+// .translate{
+  height: 100px
+  width: 100px
+  transform: translate(200px, 50%)
+}
+
+// This example will move the div by 200px on the X axis and by 100px * 50% = 50px on the Y axis.
+
+// TRANSFORM ORIGIN
+
+// Transformations are done w.r.t. a point which is defined by the transform-origin property
+
+// The property takes 2 values: transform-origin: X (from left), Y (from top); Default is 50%, 50% (center)
+// (0, 0) is from top left, and (100%, 0) is from top right
+// NOTE: Transform can be a transition-property. Example: transition: transform all
+*/
+/* Feed Styles End */
+
+/* Main body style starts */
