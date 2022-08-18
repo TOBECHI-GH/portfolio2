@@ -191,7 +191,7 @@ html {
 /* Main body style starts */
 
 .main_body {
-  border: 3px solid orange;
+  /* border: 3px solid orange; */
   display: flex;
   /* background-color: blue; */
 }
@@ -231,7 +231,7 @@ html {
 /* Feed Styles Start */
 
 .feed {
-  border: 3px solid blue;
+  /* border: 3px solid blue; */
   flex: 1;
   padding: 30px 100px;
   display: flex;
@@ -270,7 +270,7 @@ html {
 }
 
 .story_reel {
-  border: 3px solid red;
+  /* border: 3px solid red; */
   padding: 10px 0px;
   display: flex;
   /* width: 100%; */
@@ -366,7 +366,7 @@ body {
 
 .post_top {
   display: flex;
-  border: 3px solid red;
+  /* border: 3px solid red; */
   align-items: center;
   padding: 15px 25px;
 }
@@ -387,7 +387,7 @@ body {
 }
 
 .post_bottom {
-  border: 3px solid red;
+  /* border: 3px solid red; */
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 15px 25px;
@@ -734,7 +734,7 @@ body {
 
 /* 16PX SCALE
 
- NOTE: Just use the Desired/Base formular for the em(rems). Then multiply the em(rem) to get the percentae scale.
+ NOTE: Just use the Desired/Base formular for the em(rems). Then multiply the em(rem) by 100 to get the percentage scale.
 
  16px scale     ems(rems)         percentages
 
@@ -747,7 +747,7 @@ body {
 
 /* 12PX SCALE
 
- NOTE: Just use the Desired/Base formular for the em(rems). Then multiply the em(rem) to get the percentae scale.
+ NOTE: Just use the Desired/Base formular for the em(rems). Then multiply the em(rem) by 100 to get the percentage scale.
 
  12px scale     ems(rems)            percentages
 
@@ -760,7 +760,7 @@ body {
 
 /* 10PX SCALE
 
- NOTE: Just use the Desired/Base formular for the em(rems). Then multiply the em(rem) to get the percentae scale.
+ NOTE: Just use the Desired/Base formular for the em(rems). Then multiply the em(rem) by 100 to get the percentage scale.
 
  10px scale     ems(rems)             percentages
 
