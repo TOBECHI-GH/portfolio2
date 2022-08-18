@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;700&family=Poppins:wght@400;700&display=swap");
+
 * {
   /* border: 3px solid red; */
   margin: 0;
@@ -6,6 +8,18 @@
   /* border: 3px solid red; */
 }
 
+html {
+  /* scroll-behavior: smooth; */
+  overflow-x: hidden;
+}
+/* By default in the CSS box model, the width and height you assign to an element is applied only to the element's content box.
+// If the element has any border or padding, this is then added to the width and height to arrive at the size of the box that's rendered on the screen. */
+
+/* box-sizing: border-box; means that any padding and border should find their square root within the width and height specified. No one will create extra space for them */
+/*  For example, .box {width: 350px; border: 10px solid black;} renders a box that is 350px wide, with the area for content being 330px wide. */
+
+/* box-sizing: content-box; is the default behaviour in which the border or padding is added separately from the content width or height, making it wider or higher*/
+/* For example, .box {width: 350px; border: 10px solid black;} renders a box that is 370px wide. */
 /* There is always a default margin to the body tag. So we set it to zero */
 /* The * will select every tag */
 
@@ -61,6 +75,8 @@
   outline-width: 0;
 }
 
+/* Input style will affect size of placeholder (font-size) */
+
 /* Outline width = 0 : allows the input field to not have an outline when clicked, even if the border is set to none */
 
 /* If an element has a background color, and you want to make the background color be visible in front, set the element's background color to transparent */
@@ -71,8 +87,47 @@
   flex: 1;
   /* border: 3px solid red; */
 }
+/* Note: If the element is not a flexible item, the flex property has no effect. */
 
 /* What does the flex property do? Like the flex: 1? The header_middle box takes as much space as possible, even in a justify-content: space between*/
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/flex */
+
+/* flex: flex-grow flex-shrink flex-basis|auto|initial|inherit; Default value: 0 1 auto */
+
+/* The flex-grow property specifies how much the item will grow relative to the rest of the flexible items inside the same container. The default value is 0 (zero) */
+
+/* The flex-shrink property specifies how the item will shrink relative to the rest of the flexible items inside the same container. Te default value is 1. flex-shrink: number|initial|inherit; */
+
+/* The flex-basis property specifies the initial length of a flexible item. flex-basis: number|auto|initial|inherit; The number can be a unit length, and auto means the length is equal to the length of the flexible item. If the item has no length specified, the length will be according to its content. Default value is auto. */
+
+/* PLEASE NOTE: One value, unitless number: flex-grow. flex-basis is then equal to 0. flex: 2 means flex grow is two */
+
+/* PLEASE NOTE: One value, width/height(px, %, em, rem): flex-basis. If you see one value and it has p, em, rem, or %, it refers to flex-basis NOT flex-grow */
+
+/* PLEASE NOTE: Two values: flex-grow | flex-basis flex: 1 30px */
+
+/* PLEASE NOTE: Two unitless values: flex-grow | flex-shrink flex: 2 2 */
+
+/* PLEASE NOTE: Three values: flex-grow | flex-shrink | flex-basis flex: 2 2 10%*/
+
+/* 1 2 = grow | shrink
+
+   1 20px = grow | basis
+
+   1 2 20px = grow |shrink | basis
+
+   none
+
+   auto
+
+   1 (1 1 0) (Shrink is assumed to be 1, and basis is assumed to be 0 when ony one unit is given. Here given value is 1 for flex grow)
+
+   2opx (1 1 20px) (Grow is assumed to be 1, and Shrink is assumed to be 1, while the basis is 20px)
+
+   initial
+
+*/
 
 .header_option .material-icons {
   font-size: xx-large;
@@ -136,7 +191,7 @@
 /* Main body style starts */
 
 .main_body {
-  /* border: 3px solid orange; */
+  border: 3px solid orange;
   display: flex;
   /* background-color: blue; */
 }
@@ -176,7 +231,7 @@
 /* Feed Styles Start */
 
 .feed {
-  /* border: 3px solid blue; */
+  border: 3px solid blue;
   flex: 1;
   padding: 30px 100px;
   display: flex;
@@ -215,10 +270,11 @@
 }
 
 .story_reel {
-  /* border: 3px solid red; */
+  border: 3px solid red;
   padding: 10px 0px;
   display: flex;
   /* width: 100%; */
+  /* justify-content: center; */
 }
 
 /* Trick: Width of 100% of a flex item inside its flex container. The flex container has justify and align of center. */
@@ -226,6 +282,7 @@
 
 body {
   background-color: #f1f2f5;
+  font-family: "Outfit", sans-serif;
 }
 
 /* MessageSender styles start */
@@ -264,6 +321,7 @@ body {
   margin: 0 10px;
   border-radius: 999px;
   background-color: #eff2f5;
+  font-size: medium;
 }
 
 .messageSender_buttom {
@@ -290,6 +348,201 @@ body {
   background-color: #eff2f5;
   cursor: pointer;
 }
+
+/* Post style starts */
+
+.post {
+  /* border: 3px solid red; */
+  margin-top: 15px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 7px -7px rgba(0, 0, 0, 0.75);
+  width: 100%;
+}
+
+.post_image img {
+  width: 100%;
+}
+
+.post_top {
+  display: flex;
+  border: 3px solid red;
+  align-items: center;
+  padding: 15px 25px;
+}
+
+.post_avatar {
+  margin-right: 10px;
+}
+
+.post_topInfo h3 {
+  font-size: medium;
+  /* margin: 10px; */
+}
+
+.post_topInfo p {
+  font-size: small;
+  color: gray;
+  /* margin: 10px; */
+}
+
+.post_bottom {
+  border: 3px solid red;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 15px 25px;
+  font-size: large;
+}
+
+.post_options {
+  padding-top: 10px;
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: small;
+  color: gray;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.post_option {
+  display: flex;
+  /* border: 3px solid red; */
+  align-items: center;
+  padding: 5px;
+  flex: 1;
+  justify-content: center;
+}
+
+/* NOTE: Flex :1 will allow the div expand to all its parent width */
+
+.post_option h3 {
+  margin-left: 20px;
+}
+
+.post_option:hover {
+  cursor: pointer;
+  background-color: #eff2f5;
+  border-radius: 10px;
+}
+
+/* Media Queries: Responsiveness */
+/* NOTE: 768 is for Tablet screen. But since we are setting it to maximum of 768, even the sizes below 768 (i.e Mobile L, M, S) will have the same properties defined in the media query. Except Laptop and Laptop L */
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .header_input input {
+    display: none;
+  }
+
+  .header_middle {
+    display: none;
+  }
+
+  .header_info {
+    display: none;
+  }
+
+  .widgets {
+    display: none;
+  }
+
+  .feed {
+    padding-top: 20px;
+    width: 100vw;
+    padding: 0;
+  }
+
+  .story h4 {
+    font-size: 10px;
+  }
+
+  .post_bottom {
+    padding: 10px 10px;
+    font-size: small;
+  }
+
+  .post_top {
+    padding: 10px 10px;
+  }
+
+  .post_topInfo h3 {
+    font-size: small;
+  }
+
+  .post_topInfo p {
+    font-size: x-small;
+    /* color: gray; */
+    /* margin: 10px; */
+  }
+
+  .story_avatar {
+    width: 40px;
+  }
+
+  .post_option .material-icons {
+    font-size: medium;
+  }
+
+  .post_option h3 {
+    font-size: small;
+  }
+
+  .messageSender_option h3 {
+    font-size: small;
+  }
+
+  .messageSender_top form input {
+    font-size: small;
+  }
+}
+
+/* Mobile small media query */
+/* Here we are defining the 320px with minimum. That is all the sizes above 320 (i.e Mobile M, L, Tablet, Laptop, Laptop L) */
+@media (min-width: 320px) {
+  .story_reel {
+    width: 100%;
+    overflow-x: scroll;
+    /* overflow: hidden; */
+  }
+}
+
+/* @media (width: 768px) {
+  .story_reel {
+    justify-content: center;
+  }
+} */
+
+@media (min-width: 664px) {
+  .story_reel {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+  .feed {
+    width: 50%;
+    padding: 10px 50px;
+  }
+}
+
+/* Difference between width in percentage and flex */
+
+/* @media (width: 320px) {
+  .story_reel {
+    width: 100%;
+    overflow-x: scroll;
+  }
+} */
+
+/* Width 100% is w.r.t. te parent container */
+/* In the media query fot the tablet screen, we had already removed the widget and the sidebar. So the feed container became larger that the main_body container. Recall the main_body is a flex container that grows. So we had to set the feed to 100% of its parent (main_body)  */
+/* Color affects both text and icons, while font-size is for only text */
+
+/* Post style ends */
 
 /* PLEASE NOTE: justify-contenet: space evenly will leave a space at the beinning, while space between will not */
 
@@ -420,3 +673,100 @@ body {
 /* Feed Styles End */
 
 /* Main body style starts */
+
+/* The flex property sets the flexible length on flexible items. It is a shorthand property for: flex-grow, flex-shrink, flex-basis */
+
+/* ADVANCED CSS */
+
+/* NOTE: There are 3 AND ONLY 3 classes of CSS selectors: (1) Element selectors (2) Attribute Selectors (3) Pseudo-selectors */
+
+/* ELEMENT SELECTORS
+
+ Universal = *{}
+
+ Type = h2, h1 {}
+
+ ID (one) = #menu {}
+
+ Class (many) = .note{}
+
+ Descendant = div p {}
+
+ Child = div > p {}
+
+ Adjacent Sibling = div + p {}
+
+ General Sibling = div ~ p {}
+
+*/
+
+/* ATTRIBUTE SELECTORS
+
+ Existence = a[title]
+
+ Equality = a[href="https://google.com"]
+
+ Prefix (beginning) = a[href^="https"]
+
+ Substring (contains) = a[href*="google"]
+
+ Suffix (ending) = a[href$=".com"]
+
+ List match = a[href*="google facebook youtube"]
+
+*/
+
+/* PSEUDO-SELECTORS (Over 60 PSEUDO-CLASSES and 14 (standard) PSEUDO-ELEMENTS)
+
+ :link :visited :hover :after :not :target :required
+
+ :first-child :last-of-type :nth-child(7) :nth-child(even) or :nth-child(2n) :nth-child(odd) or :nth-child(2n+1)
+
+*/
+
+/* CSS UNITS
+
+ Default browser font-size = 16px
+
+ PLEASE NOTE: Desired / Base = 32px / 12px = 2.67 on a 12px scale (base)
+
+*/
+
+/* 16PX SCALE
+
+ NOTE: Just use the Desired/Base formular for the em(rems). Then multiply the em(rem) to get the percentae scale.
+
+ 16px scale     ems(rems)         percentages
+
+ body = 16px    body = 1rem       body = 100%
+ h1 = 32px      h1 = 2em          h1 = 200%
+ h2 = 24px      h2 = 1.5em        h2 = 150%
+ h3 = 18px      h3 = 1.125em      h3 = 112.5%
+
+*/
+
+/* 12PX SCALE
+
+ NOTE: Just use the Desired/Base formular for the em(rems). Then multiply the em(rem) to get the percentae scale.
+
+ 12px scale     ems(rems)            percentages
+
+ body = 12px    body = 0.75rem       body = 75%
+ h1 = 32px      h1 = 2.67em          h1 = 267%
+ h2 = 24px      h2 = 2em             h2 = 200%
+ h3 = 18px      h3 = 1.5em           h3 = 150%
+
+*/
+
+/* 10PX SCALE
+
+ NOTE: Just use the Desired/Base formular for the em(rems). Then multiply the em(rem) to get the percentae scale.
+
+ 10px scale     ems(rems)             percentages
+
+ body = 10px    body = 0.625rem       body = 62.5%
+ h1 = 32px      h1 = 3.2em            h1 = 320%
+ h2 = 24px      h2 = 2.4em            h2 = 240%
+ h3 = 18px      h3 = 1.8em            h3 = 180%
+
+*/
