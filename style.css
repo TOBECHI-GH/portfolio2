@@ -738,7 +738,7 @@ body {
 
  16px scale     ems(rems)         percentages
 
- body = 16px    body = 1rem       body = 100%
+ body = 16px    body = 1em       body = 100%
  h1 = 32px      h1 = 2em          h1 = 200%
  h2 = 24px      h2 = 1.5em        h2 = 150%
  h3 = 18px      h3 = 1.125em      h3 = 112.5%
@@ -751,7 +751,7 @@ body {
 
  12px scale     ems(rems)            percentages
 
- body = 12px    body = 0.75rem       body = 75%
+ body = 12px    body = 0.75em       body = 75%
  h1 = 32px      h1 = 2.67em          h1 = 267%
  h2 = 24px      h2 = 2em             h2 = 200%
  h3 = 18px      h3 = 1.5em           h3 = 150%
@@ -764,9 +764,16 @@ body {
 
  10px scale     ems(rems)             percentages
 
- body = 10px    body = 0.625rem       body = 62.5%
+ body = 10px    body = 0.625em       body = 62.5%
  h1 = 32px      h1 = 3.2em            h1 = 320%
  h2 = 24px      h2 = 2.4em            h2 = 240%
  h3 = 18px      h3 = 1.8em            h3 = 180%
+
+*/
+
+/*
+ em = relative to its container
+
+ rem = relative to root document
 
 */
